@@ -29,3 +29,4 @@ No requiere librerias externas (solo Python 3.8+).
 
 5. **Correr Pruebas**
    `python src/main.py test`
+  
