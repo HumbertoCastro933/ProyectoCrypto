@@ -1,17 +1,27 @@
 import unittest
-from src.cipher import MiAlgoritmoCipher
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-class TestCifrado(unittest.TestCase):
-    def test_reversible(self):
-        """Prueba de integridad basica: Dec(Enc(M)) == M"""
-        key = b'0000000000000000' # Ejemplo de clave 16 bytes
-        cipher = MiAlgoritmoCipher(key)
-        mensaje = b"Hola Mundo Crypto"
-        
-        cifrado = cipher.encrypt_file(mensaje)
-        descifrado = cipher.decrypt_file(cifrado)
-        
-        self.assertEqual(mensaje, descifrado, "El descifrado no recuperó el mensaje original")
+from src.cipher import SingularityCipher
+
+class TestSingularity(unittest.TestCase):
+    def setUp(self):
+        self.key = b'0123456789ABCDEF'
+
+    def test_reversibilidad(self):
+        cipher = SingularityCipher(self.key)
+        msg = b"PruebaDeSingularity"
+        enc = cipher.encrypt(msg)
+        dec = cipher.decrypt(enc)
+        self.assertEqual(msg, dec)
+
+    def test_padding(self):
+        cipher = SingularityCipher(self.key)
+        msg = b"123" 
+        enc = cipher.encrypt(msg)
+        self.assertEqual(len(enc) % 8, 0)
+        self.assertEqual(cipher.decrypt(enc), msg)
 
 if __name__ == '__main__':
     unittest.main()
