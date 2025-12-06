@@ -19,13 +19,13 @@ No requiere librerias externas (solo Python 3.8+).
 
 2. **Cifrar un archivo**
    (Colocar archivo en `sandbox/`)
-   `python src/main.py encrypt secreto.txt secreto.enc`
+   `python src/main.py encrypt prueba.txt prueba.enc`
 
 3. **Descifrar un archivo**
-   `python src/main.py decrypt secreto.enc recuperado.txt`
+   `python src/main.py decrypt prueba.enc recuperado.txt`
 
 4. **Ver Métricas (Entropía/Avalancha)**
-   `python src/main.py analyze secreto.txt`
+   `python src/main.py analyze prueba.txt`
 
 5. **Correr Pruebas**
    `python src/main.py test`
