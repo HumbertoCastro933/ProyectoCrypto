@@ -29,3 +29,6 @@ No requiere librerias externas (solo Python 3.8+).
 
 5. **Correr Pruebas**
    `python src/main.py test`
+
+   ## Nota
+   Los archivos .gitkeep no tienen utilidad solo es para que se suban las carpetas 
