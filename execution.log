@@ -1,0 +1,10 @@
+[2025-12-06 17:54:22] [INFO] Comando INIT ejecutado.
+[2025-12-06 17:54:22] [SUCCESS] Sistema inicializado. Nueva clave generada y guardada en escrow.
+[2025-12-06 17:54:42] [INFO] Comando ENCRYPT ejecutado. Input: prueba.txt
+[2025-12-06 17:54:42] [SUCCESS] Cifrado exitoso. Salida: prueba.enc. Tiempo: 0.0073s. Velocidad: 95.85 KB/s
+[2025-12-06 17:54:47] [INFO] Comando DECRYPT ejecutado. Input: prueba.enc
+[2025-12-06 17:54:47] [SUCCESS] Descifrado exitoso. Salida: recuperado.txt. Tiempo: 0.0000s.
+[2025-12-06 17:54:54] [INFO] Comando ANALYZE ejecutado. Input: prueba.txt
+[2025-12-06 17:54:54] [SUCCESS] Reporte de análisis generado exitosamente.
+[2025-12-06 17:54:59] [INFO] Comando TEST ejecutado. Corriendo suite de pruebas automatizadas.
+[2025-12-06 17:54:59] [SUCCESS] Pruebas unitarias completadas satisfactoriamente (SUCCESS).
